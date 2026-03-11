@@ -10,6 +10,10 @@
 - [VSCode](https://code.visualstudio.com/)
 - [The Unarchiver](https://theunarchiver.com/)
 - [ClashX](https://en.clashx.org/)
+- [AppCleaner](https://freemacsoft.net/appcleaner/)
+- [FannyWidget](https://www.fannywidget.com/)
+- [Stats](https://mac-stats.com/)
+
 
 ## Setting
 
@@ -32,3 +36,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 $ pwpolicy -clearaccountpolicies
 $ passwd
 ```
+
+## 
+
+```bash
+# MacOS 13 清空右侧的通知弹窗 命令行
+sfltool resetbtm
+
+killall NotificationCenter
+```
+

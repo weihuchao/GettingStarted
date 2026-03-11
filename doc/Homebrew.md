@@ -28,5 +28,11 @@ sudo mtr -rw formulae.brew.sh
 ```bash
 # https://xcodereleases.com/
 Xcode 15.2 Last For MacOS 13.5+
+# 解压后拖到应用中
+```
 
+## ffmpeg
+
+```bash
+brew install ffmpeg
 ```
