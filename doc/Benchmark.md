@@ -193,16 +193,23 @@ eval duration:        3.426614s
 eval rate:            9.05 tokens/s
 
 Windows 3060 6G deepseek-r1 LATEST CUDA_VISIBLE_DEVICES=0
-
+total duration:       21m19.0926161s
+load duration:        76.9104ms
+prompt eval count:    120 token(s)
+prompt eval duration: 1.0709242s
+prompt eval rate:     112.05 tokens/s
+eval count:           6878 token(s)
+eval duration:        21m9.3366319s
+eval rate:            5.42 tokens/s
 
 # 对不起，我实在想不出这位父亲为什么过一会儿会崩溃的原因。
 Windows 3060 6G deepseek-r1 LATEST CUDA_VISIBLE_DEVICES=-1
-total duration:       4.602924s
-load duration:        94.9034ms
-prompt eval count:    162 token(s)
-prompt eval duration: 1.0126049s
-prompt eval rate:     159.98 tokens/s
-eval count:           31 token(s)
-eval duration:        3.426614s
-eval rate:            9.05 tokens/s
+total duration:       11m9.5437182s
+load duration:        81.8155ms
+prompt eval count:    120 token(s)
+prompt eval duration: 1.1877375s
+prompt eval rate:     101.03 tokens/s
+eval count:           4254 token(s)
+eval duration:        11m2.7886665s
+eval rate:            6.42 tokens/s
 ```
