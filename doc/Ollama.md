@@ -24,6 +24,12 @@
 curl -fsSL https://ollama.com/install.sh | sh
 # Windows
 irm https://ollama.com/install.ps1 | iex
+# brew install
+$ brew install ollama
+To start ollama now and restart at login:
+  brew services start ollama
+Or, if you don't want/need a background service you can just run:
+  OLLAMA_FLASH_ATTENTION="1" OLLAMA_KV_CACHE_TYPE="q8_0" /opt/homebrew/opt/ollama/bin/ollama serve
 
 curl http://localhost:11434/
 ```
@@ -36,7 +42,7 @@ ollama run llama3.1
 ollama run llama3.1 --verbose
 # https://ollama.com/library/deepseek-r1
 ollama run deepseek-r1
-ollama run deepseek-r1 --verbose
+ollama run deepseek-r1 --verbose --think
 
 --think
 --think=false
@@ -82,6 +88,8 @@ Available Commands:
   /set noformat          Disable formatting
   /set verbose           Show LLM stats
   /set quiet             Disable LLM stats
+  /set think             Enable thinking
+  /set nothink           Disable thinking
 
 # 不确定是否有效
 # https://www.reddit.com/r/ollama/comments/1jym9jq/num_gpu_parameter_clearly_underrated/

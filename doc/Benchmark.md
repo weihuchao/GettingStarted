@@ -101,6 +101,7 @@ eval rate:            7.22 tokens/s
 """
 
 ```bash
+# 没有正确解读
 Mac mini m4 llama3.1 LATEST
 total duration:       6.257216167s
 load duration:        83.952125ms
@@ -111,6 +112,15 @@ eval count:           86 token(s)
 eval duration:        4.170401672s
 eval rate:            20.62 tokens/s
 
+# 蒙圈了，强行解释了
+total duration:       6m14.557932708s
+load duration:        188.4155ms
+prompt eval count:    120 token(s)
+prompt eval duration: 979.783041ms
+prompt eval rate:     122.48 tokens/s
+eval count:           6444 token(s)
+eval duration:        6m8.856988622s
+eval rate:            17.47 tokens/s
 
 Windows 3060 6G llama3.1 LATEST 19.0
 44 3.0s
