@@ -11,8 +11,18 @@ git remote -v
 git remote set-url origin git@github.com:huchaoclaw/GettingStarted.git
 
 gaa && gcmsg update && ggpush
+git add . && git commit -m update && git push
 
 git config pull.rebase false
+```
+
+### Windows
+
+```bash
+cd /d/Code/GettingStarted
+git status
+git diff
+git add . && git commit -m update && git push
 ```
 
 ## Keys
