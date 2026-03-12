@@ -3,6 +3,10 @@
 ```bash
 git config --global user.email "huchaoclaw@gmail.com"
 git config --global user.name "Huchao Claw"
+
+git config --global user.email "weihuchao@gmail.com"
+git config --global user.name "Huchao Wei"
+
 git remote -v
 git remote set-url origin git@github.com:huchaoclaw/GettingStarted.git
 

@@ -24,4 +24,53 @@ curl -fsSL https://ollama.com/install.sh | sh
 curl http://localhost:11434/
 
 ollama run llama3.1
+# https://ollama.com/library/deepseek-r1
+ollama run deepseek-r1
+
+/clear
+/set verbose
+
+/set parameter num_gpu 0
+/set parameter num_gpu 1
+```
+
+## Windows 使用 GPU
+
+https://developer.nvidia.cn/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local
+
+```bash
+irm https://ollama.com/install.ps1 | iex
+
+set OLLAMA_DEBUG=1
+ollama serve
+# 查看日志中是否出现 llama_model_load: n_gpu_layers = ... 以及 detecting GPUs 的信息。
+
+set OLLAMA_GPU_LAYER=cuda
+set OLLAMA_FLASH_ATTENTION=1
+set CUDA_VISIBLE_DEVICES=0
+
+echo $env
+
+按下 Win + S 搜索 “编辑系统环境变量
+在“用户变量”栏找到 Path，点击 “编辑”。
+C:\Users\weihc\AppData\Local\Programs\Ollama
+
+[Environment]::SetEnvironmentVariable("变量名", "变量值", "User")
+setx Path "%Path%;C:\你的路径"
+setx Path "%Path%;C:\你的路径" /M
+
+$oldPath = [Environment]::GetEnvironmentVariable("Path", "Machine")
+$oldPath
+$newPath = "$oldPath;C:\你的路径"
+[Environment]::SetEnvironmentVariable("Path", $newPath, "Machine")
+
+```
+
+https://docs.ollama.com/gpu#gpu-selection
+
+```bash
+> nvidia-smi -L
+GPU 0: NVIDIA GeForce RTX 3060 Laptop GPU (UUID: GPU-6ed55e4b-da9b-e21b-2f80-48dd4a87b039)
+
+/set parameter CUDA_VISIBLE_DEVICES
 ```
